@@ -3,6 +3,7 @@ import 'package:islami/home.dart';
 import 'package:islami/my_theme_data.dart';
 import 'package:islami/splash_screen.dart';
 import 'package:islami/surah_details.dart';
+import 'package:islami/tabs/sebha.dart';
 
 
 void main() {
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         SplashScreen.routeName: (context) => SplashScreen(),
         HomeScreen.routeName: (context) => HomeScreen(),
         SurahDetails.routeName: (context) => SurahDetails(),
+
       },
       debugShowCheckedModeBanner: false,
       theme: MyThemeData.lightTheme,
