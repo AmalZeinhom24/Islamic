@@ -272,11 +272,11 @@ class QuranTap extends StatelessWidget {
           Expanded(
             child: ListView.separated(
                 separatorBuilder: (context, index) => Divider(
-                  thickness: 1,
-                  color: MyThemeData.primary,
-                  endIndent: 40,
-                  indent: 40,
-                ),
+                      thickness: 1,
+                      color: MyThemeData.primary,
+                      endIndent: 40,
+                      indent: 40,
+                    ),
                 itemCount: suraNames.length,
                 itemBuilder: (context, index) {
                   return Table(
@@ -300,7 +300,7 @@ class QuranTap extends StatelessWidget {
                                 Navigator.pushNamed(
                                     context, SurahDetails.routeName,
                                     arguments:
-                                    SurahModel(suraNames[index], index));
+                                        SurahModel(suraNames[index], index));
                               },
                               child: Text(suraNames[index],
                                   style: TextStyle(fontSize: 20),
@@ -318,4 +318,3 @@ class QuranTap extends StatelessWidget {
     );
   }
 }
-

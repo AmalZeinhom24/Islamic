@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:islami/my_theme_data.dart';
 import 'package:islami/surah_model.dart';
 
-
 class SurahDetails extends StatefulWidget {
   static const String routeName = 'suraDetails';
 
@@ -25,41 +24,44 @@ class _SurahDetailsState extends State<SurahDetails> {
 
     return SafeArea(
         child: Container(
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage("assets/images/background.png"),
-                  fit: BoxFit.fill)),
-          child: Scaffold(
-            appBar: AppBar(
-              backgroundColor: Colors.transparent,
-              title: Text(args.name, style: Theme.of(context).textTheme.bodyLarge),
-            ),
-            body: Card(
-              elevation: 14,
-              margin: EdgeInsets.all(15),
-              shape: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(25),
-                borderSide: BorderSide(color: MyThemeData.primary),
-              ),
-              child: ListView.separated(
-                  separatorBuilder: (context, index) => Divider(
-                    thickness: 1,
-                    endIndent: 40,
-                    indent: 40,
-                  ),
-                  itemCount: verses.length,
-                  itemBuilder: (context, index) {
-                    return Directionality(
-                      textDirection: TextDirection.rtl,
-                      child: Text(
-                        "${verses[index]}(${index + 1})",
-                        textAlign: TextAlign.center,
-                      ),
-                    );
-                  }),
-            ),
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("assets/images/background.png"),
+              fit: BoxFit.fill)),
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          title: Text(args.name, style: Theme.of(context).textTheme.bodyLarge),
+        ),
+        body: Card(
+          elevation: 14,
+          margin: EdgeInsets.all(15),
+          shape: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(25),
+            borderSide: BorderSide(color: MyThemeData.primary),
           ),
-        ));
+          child: Padding(
+            padding: const EdgeInsets.all(18.0),
+            child: ListView.separated(
+                separatorBuilder: (context, index) => Divider(
+                      thickness: 1,
+                      endIndent: 40,
+                      indent: 40,
+                    ),
+                itemCount: verses.length,
+                itemBuilder: (context, index) {
+                  return Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: Text(
+                      "${verses[index]}(${index + 1})",
+                      textAlign: TextAlign.center,
+                    ),
+                  );
+                }),
+          ),
+        ),
+      ),
+    ));
   }
 
   /*To read text files from assets use rootBundle.loadString in a function
