@@ -21,7 +21,8 @@ class _AhadethDetailsState extends State<AhadethDetails> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          title: Text(args.title, style: Theme.of(context).textTheme.bodyLarge),
+          title: Text(args.title, style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 25),
+            overflow: TextOverflow.clip),
         ),
         body: Card(
           elevation: 14,
