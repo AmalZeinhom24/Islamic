@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami/my_theme_data.dart';
 import 'package:islami/surah_details.dart';
 import 'package:islami/surah_model.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class QuranTap extends StatelessWidget {
   List<String> suraNames = [
@@ -252,13 +253,13 @@ class QuranTap extends StatelessWidget {
             children: [
               Expanded(
                 child: Center(
-                  child: Text("عدد الآيات",
+                  child: Text(AppLocalizations.of(context)!.surahVerses,
                       style: Theme.of(context).textTheme.bodyMedium),
                 ),
               ),
               Expanded(
                 child: Center(
-                  child: Text("اسم السورة",
+                  child: Text(AppLocalizations.of(context)!.surahNames,
                       style: Theme.of(context).textTheme.bodyMedium),
                 ),
               ),
