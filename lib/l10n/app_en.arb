@@ -2,5 +2,9 @@
   "appTitle": "Islami",
   "surahNames": "Surah Name",
   "ahadeth": "Ahadeth",
-  "surahVerses": "Surah Verses"
+  "surahVerses": "Surah Verses",
+  "english": "English",
+  "arabic": "Arabic",
+  "language": "Language",
+  "mode": "Mode"
   }

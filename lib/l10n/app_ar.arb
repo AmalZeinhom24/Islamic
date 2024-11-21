@@ -2,5 +2,9 @@
   "appTitle": "إسلامي",
   "surahNames": "اسم السورة",
   "ahadeth": "الأحاديث",
-  "surahVerses": "عدد الآيات"
-  }
+  "surahVerses": "عدد الآيات",
+  "english": "اللغه الإنجليزية",
+  "arabic": "اللغه العربية",
+  "language": "اللغه",
+  "mode": "السمات"
+     }
