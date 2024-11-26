@@ -4,6 +4,7 @@ import 'package:islami/provider/my_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../bottom_sheets/show_language_bottom_sheets.dart';
+import '../bottom_sheets/show_theme_bottom_sheets.dart';
 
 class SettingsTap extends StatefulWidget {
   const SettingsTap({super.key});
@@ -56,7 +57,9 @@ class _SettingsTapState extends State<SettingsTap> {
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(color: MyThemeData.primary),
               ),
-              child: Text("Light"),
+              child: Text(pro.theme == ThemeMode.light
+                  ? AppLocalizations.of(context)!.light
+                  : AppLocalizations.of(context)!.dark),
             ),
           ),
         ],
@@ -87,12 +90,8 @@ class _SettingsTapState extends State<SettingsTap> {
   void showThemingBottomSheet() {
     showModalBottomSheet(
       context: context,
-      isScrollControlled: true,
       builder: (context) {
-        return Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.only()),
-          height: MediaQuery.of(context).size.height * 0.4,
-        );
+        return ThemeBottomSheet();
       },
     );
   }
